@@ -15,11 +15,26 @@
             <button class="btn4 btn">4번</button>
         </div>
         <div id="right">
-            <div id="section1 section">1번</div>
-            <div id="section2 section">2번</div>
-            <div id="section3 section">3번</div>
-            <div id="section4 section">4번</div>
+            <div id="section1" class="section">1번</div>
+            <div id="section2" class="section" style="display: none;">2번</div>
+            <div id="section3" class="section" style="display: none;">3번</div>
+            <div id="section4" class="section" style="display: none;">4번</div>
         </div>
     </div>
+    <script>
+
+        function showSection (el){
+            document.querySelectorAll(".section").forEach(section => {
+                section.style.display = "none";
+            });
+            document.querySelector(el).style.display = 'block'
+        }
+
+        document.querySelector(".btn1").addEventListener('click', ()=>{showSection('#section1')});
+        document.querySelector(".btn2").addEventListener('click', ()=>{showSection('#section2')});
+        document.querySelector(".btn3").addEventListener('click', ()=>{showSection('#section3')});
+        document.querySelector(".btn4").addEventListener('click', ()=>{showSection('#section4')});
+
+    </script>
 </body>
 </html>

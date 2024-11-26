@@ -21,19 +21,28 @@ body #wrap #left .btn {
   border: 0;
   background-color: yellow;
 }
+body #wrap #left .btn:hover {
+  background-color: lightcoral;
+}
 body #wrap #right {
   width: 70%;
   height: 100%;
   border: 1px solid blue;
 }
-body #wrap #right #section {
+body #wrap #right .section {
   display: block;
   width: 100%;
   height: 100%;
+}
+body #wrap #right .section#section1 {
   background-color: lightblue;
 }
-body #wrap #right #section#section1 {
-  width: 100%;
-  height: 500px;
+body #wrap #right .section#section2 {
   background-color: lightcoral;
+}
+body #wrap #right .section#section3 {
+  background-color: lightgreen;
+}
+body #wrap #right .section#section4 {
+  background-color: lightsalmon;
 }/*# sourceMappingURL=main.css.map */
