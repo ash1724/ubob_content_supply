@@ -1,5 +1,7 @@
 @import "./reset.css";
 
+$primary-color: #f58536;  // 유밥 주황색
+
 body {
     width: 100%;
     height: 100%;    
@@ -11,7 +13,7 @@ body {
         #left {
             width: 30%;
             height: 100%;
-            border: 1px solid black;
+            border-right: solid 1px black;
             .btn {
                 width: 100%;
                 height: 50px;
@@ -26,25 +28,76 @@ body {
         #right {
             width: 70%;
             height: 100%;            
-            border: 1px solid blue;
             .section {
                 display: block;
                 width: 100%;
                 height: 100%;
-            
-                &#section1 {
-                    background-color: lightblue;
+            }
+            #section1 {
+                width: 100%;
+                height: 100%;
+                font-family: Arial, sans-serif;
+                .textBox {
+                    text-align: center;
+                    margin: 10px 0;
+                    h2 {
+                        font-size: 18px;
+                        font-weight: 600;
+                        background-image: linear-gradient(104deg, #eb4134 0%, #f58536 100%);
+                        background-clip: text;
+                        color: rgba(0, 0, 0, 0);
+                        margin-bottom: 10px;
+                    }
+                    h4 {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-weight: 200;
+                    }
                 }
-                &#section2 {
-                    background-color: lightcoral;
-                }
-                &#section3 {
-                    background-color: lightgreen;
-                }
-                &#section4 {
-                    background-color: lightsalmon;
+                .btnBox {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;                    
+                    button {       
+                        padding: 5px 15px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: #fff;
+                        border: 1px solid #f7691d;
+                        color: #f7691d;
+                        transition: background-color 0.3s;                    
+                        &:hover {
+                            background-color: #f7691d;
+                            color: #fff;
+                        }
+                        &#pathSelect {
+                            margin-bottom: 0px;
+                        }
+                        &#startBtn {
+                            margin-bottom: 10px;
+                        }
+                    }
+                    #fileContent {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-weight: 300;
+                    }
+                    .resultTextNum {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-weight: 300;
+                    }
+                    .resultText {
+                        color: rgba(0, 0, 0, 0.5);
+                        font-weight: 300;
+                        font-size: 13px;
+                    }
                 }
             }
+            #section2 {}
+            #section3 {}
+            #section4 {}
         }
     }
 }

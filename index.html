@@ -15,7 +15,20 @@
             <button class="btn4 btn">4번</button>
         </div>
         <div id="right">
-            <div id="section1" class="section">1번</div>
+            <div id="section1" class="section">
+                <div class="textBox">
+                    <h2>엑셀 데이터로 DB 정보 등록하기(list.xls)</h2>
+                    <h4>num / company_name / kwajung_code / kwajung_name / contents_path / sample_url</h4>
+                </div>
+    
+                <div class="btnBox">
+                    <button id="pathSelect">엑셀 선택</button>
+                    <pre id="fileContent"></pre>
+                    <button id="startBtn">시작</button>
+                    <div class="resultTextNum"></div>
+                    <div class="resultText"></div>
+                </div>
+            </div>
             <div id="section2" class="section" style="display: none;">2번</div>
             <div id="section3" class="section" style="display: none;">3번</div>
             <div id="section4" class="section" style="display: none;">4번</div>
@@ -34,6 +47,29 @@
         document.querySelector(".btn2").addEventListener('click', ()=>{showSection('#section2')});
         document.querySelector(".btn3").addEventListener('click', ()=>{showSection('#section3')});
         document.querySelector(".btn4").addEventListener('click', ()=>{showSection('#section4')});
+
+        // section1 
+        document.getElementById("startBtn").addEventListener("click", function () {
+				console.log("버튼 클릭");
+				window.ipcRenderer.callMainFunction("Hello from Renderer");
+				window.ipcRenderer.getText().then((text) => {
+					console.log(text);
+					document.querySelector(
+						".resultTextNum"
+					).textContent = `총 ${text.kwajungNum} 과정 등록 완료하였습니다.`;
+					document.querySelector(".resultText").textContent = text.codeText;
+				});
+			});
+
+			document.getElementById("pathSelect").addEventListener("click", async () => {
+				const result = await window.ipcRenderer.selectFile();
+				if (result) {
+					const { filePath, data } = result;
+					document.getElementById("fileContent").textContent = `지정경로: ${filePath}`;
+				} else {
+					console.log(`No file selected.`);
+				}
+			});
 
     </script>
 </body>

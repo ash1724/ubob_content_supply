@@ -12,7 +12,7 @@ body #wrap {
 body #wrap #left {
   width: 30%;
   height: 100%;
-  border: 1px solid black;
+  border-right: solid 1px black;
 }
 body #wrap #left .btn {
   width: 100%;
@@ -27,22 +27,72 @@ body #wrap #left .btn:hover {
 body #wrap #right {
   width: 70%;
   height: 100%;
-  border: 1px solid blue;
 }
 body #wrap #right .section {
   display: block;
   width: 100%;
   height: 100%;
 }
-body #wrap #right .section#section1 {
-  background-color: lightblue;
+body #wrap #right #section1 {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
 }
-body #wrap #right .section#section2 {
-  background-color: lightcoral;
+body #wrap #right #section1 .textBox {
+  text-align: center;
+  margin: 10px 0;
 }
-body #wrap #right .section#section3 {
-  background-color: lightgreen;
+body #wrap #right #section1 .textBox h2 {
+  font-size: 18px;
+  font-weight: 600;
+  background-image: linear-gradient(104deg, #eb4134 0%, #f58536 100%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: rgba(0, 0, 0, 0);
+  margin-bottom: 10px;
 }
-body #wrap #right .section#section4 {
-  background-color: lightsalmon;
+body #wrap #right #section1 .textBox h4 {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 200;
+}
+body #wrap #right #section1 .btnBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body #wrap #right #section1 .btnBox button {
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #f7691d;
+  color: #f7691d;
+  transition: background-color 0.3s;
+}
+body #wrap #right #section1 .btnBox button:hover {
+  background-color: #f7691d;
+  color: #fff;
+}
+body #wrap #right #section1 .btnBox button#pathSelect {
+  margin-bottom: 0px;
+}
+body #wrap #right #section1 .btnBox button#startBtn {
+  margin-bottom: 10px;
+}
+body #wrap #right #section1 .btnBox #fileContent {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+}
+body #wrap #right #section1 .btnBox .resultTextNum {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+}
+body #wrap #right #section1 .btnBox .resultText {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 300;
+  font-size: 13px;
 }/*# sourceMappingURL=main.css.map */
