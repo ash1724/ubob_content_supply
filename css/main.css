@@ -1,0 +1,39 @@
+@import "./reset.css";
+body {
+  width: 100%;
+  height: 100%;
+}
+body #wrap {
+  width: 470px;
+  height: 530px;
+  display: flex;
+  margin: 1px;
+}
+body #wrap #left {
+  width: 30%;
+  height: 100%;
+  border: 1px solid black;
+}
+body #wrap #left .btn {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  border: 0;
+  background-color: yellow;
+}
+body #wrap #right {
+  width: 70%;
+  height: 100%;
+  border: 1px solid blue;
+}
+body #wrap #right #section {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: lightblue;
+}
+body #wrap #right #section#section1 {
+  width: 100%;
+  height: 500px;
+  background-color: lightcoral;
+}/*# sourceMappingURL=main.css.map */
